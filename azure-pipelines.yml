@@ -26,7 +26,7 @@ steps:
 - task: FlutterInstall@0
   inputs:
     mode: 'auto'
-    channel: 'beta'
+    channel: 'stable'
     version: 'latest'
 - task: FlutterBuild@0
   inputs:
