@@ -21,7 +21,15 @@ steps:
     cd $(Agent.BuildDirectory)/s
     echo $(Agent.BuildDirectory)/s
     ls
+    echo "api_key=$(gmap_api_key)" > .env
   displayName: 'Run a multi-line script'
+
+- task: Cache@2
+  inputs:
+    key: "android28"
+    restoreKeys: "android28"
+    path: "/usr/local/lib/android/sdk/platforms/android-28"
+  displayName: Cache Android sdk (test)
 
 - task: FlutterInstall@0
   inputs:
