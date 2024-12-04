@@ -33,7 +33,7 @@ steps:
     target: 'apk'
     projectDirectory: '$(Agent.BuildDirectory)/s'
   env:
-    GMAP_API: $(gmap_api_key)
+    gmap_api_key: $(gmap_api_key)
 
 - task: PublishBuildArtifacts@1
   inputs:
