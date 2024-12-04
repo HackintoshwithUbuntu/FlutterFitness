@@ -26,10 +26,9 @@ steps:
 - task: FlutterInstall@0
   inputs:
     mode: 'auto'
-    channel: 'beta'
+    channel: 'stable'
     version: 'custom'
-    customVersion: '3.11.0'
-    Custom (Flutter SDK Install Url): 'https://storage.googleapis.com/flutter_infra_release/releases/beta/linux/flutter_linux_3.11.0-0.1.pre-beta.tar.xz'
+    customVersion: '3.10.0'
 
 - task: FlutterBuild@0
   inputs:
