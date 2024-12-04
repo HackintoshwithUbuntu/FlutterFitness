@@ -29,4 +29,6 @@
 -keep,allowobfuscation,allowshrinking class com.google.gson.reflect.TypeToken
 -keep,allowobfuscation,allowshrinking class * extends com.google.gson.reflect.TypeToken
 
+# Keep things from environment variables https://github.com/ByneappLLC/flutter_config/blob/master/doc/ANDROID.md
+-keep class com.yourcompany.app.BuildConfig { *; }
 ##---------------End: proguard configuration for Gson  ----------

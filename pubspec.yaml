@@ -57,6 +57,7 @@ dependencies:
   path_provider: ^2.0.14
   intl: ^0.18.1
   workmanager: ^0.5.1
+  flutter_config: ^2.0.2
 
 dev_dependencies:
   flutter_test:

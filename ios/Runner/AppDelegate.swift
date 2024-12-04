@@ -1,6 +1,7 @@
 import UIKit
 import Flutter
 import GoogleMaps
+import flutter_config
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -32,7 +33,7 @@ import flutter_local_notifications
       }
 
     // TODO: Add your Google Maps API key
-    GMSServices.provideAPIKey("YOUR-API-KEY") 
+    GMSServices.provideAPIKey(flutter_config.FlutterConfigPlugin.env(for: "gmap_api_key")) 
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 }

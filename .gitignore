@@ -147,3 +147,4 @@ countrysettings.txt
 friendsettings.txt
 
 __pycache__/
+.env

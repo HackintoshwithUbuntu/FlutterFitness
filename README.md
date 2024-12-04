@@ -28,6 +28,7 @@ After opening a terminal in the root folder of the project run the following:
 #### Setting up the server
 The app includes a Python flask server to handle data requests. You can choose to host your own server or use one hosted by me.
 Include a part about updating the app code to reference the new server
+flask --app server.py  run --host=0.0.0.0 -p 8080 or gunicorn
 
 ## Other Notes
 The majority of the icons used in the app were created by me. They have been included as a font in the assets folder.
