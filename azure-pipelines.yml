@@ -20,7 +20,7 @@ steps:
     ls
     cd $(Agent.BuildDirectory)/s
     echo $(Agent.BuildDirectory)/s
-    echo "api_key=$(gmap_api_key)" > .env
+    echo "gmap_api_key=$(gmap_api_key)" > .env
     ls
   displayName: 'Run a multi-line script'
 
