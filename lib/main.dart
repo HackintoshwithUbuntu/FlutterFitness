@@ -15,6 +15,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:workmanager/workmanager.dart';
+import 'package:flutter_config/flutter_config.dart';
 
 // Shared prefs instance to pass through
 late SharedPreferences prefs;
@@ -55,6 +56,10 @@ Future main() async {
     initialDelay: notifTimeRemaining,
     frequency: const Duration(hours: 24),
   );
+
+  // Allow loading environment variables
+  WidgetsFlutterBinding.ensureInitialized();
+  await FlutterConfig.loadEnvVariables();
 
   // Start the notification scheduler
   //await scheduleNotifs();
