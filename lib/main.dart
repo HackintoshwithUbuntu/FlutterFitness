@@ -184,11 +184,11 @@ class _HomeViewState extends State<HomeView> {
     super.initState();
 
     // Initialise app parameters (previously including shared preferences)
-    // Now it just starts tracking location for the naerby map if it allowed to
+    // Now it just starts tracking location for the naerby map if it's allowed to
     AppNotifier notifier = Provider.of<AppNotifier>(context, listen: false);
     notifier.onAppStart();
 
-    // Continusouly send the width and wait for the function to tell us that the
+    // Continuously send the width and wait for the function to tell us that the
     // width is a valid value
     _widthFuture = whenNotZero(
       Stream<double>.periodic(const Duration(milliseconds: 50),
