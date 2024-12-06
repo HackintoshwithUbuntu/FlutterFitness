@@ -42,7 +42,8 @@ class AppNotifier extends ChangeNotifier {
       required this.navigatorKey,
       required this.prefs}) {
     _logicController = AppLogic(onGoalChange: onGoalChange, notify: notify);
-    _networkController = AppNetworking();
+    String serverUrl = prefs.getString('server_url') ?? 'http://flutterfitness.hscscalinggraphs.au:8080';
+    _networkController = AppNetworking(server: serverUrl);
   }
 
   void notify() => notifyListeners();
@@ -172,6 +173,28 @@ class AppNotifier extends ChangeNotifier {
 
   // Scaffold messenger state used for sending snackbars
   late final ScaffoldMessengerState scaffoldState = scaffoldKey.currentState!;
+
+  // Updates the server url and creates new network controller
+  void updateServerUrl(BuildContext context, String newUrl) async {
+    final oldUrl = prefs.getString('server_url');
+
+    // Show error messages but only update url when required
+    if (newUrl == '') {
+      showSnackbar("Can't have empty server, no updates made", scaffoldState);
+    } else if (newUrl == oldUrl) {
+      showSnackbar("Server was not changed", scaffoldState);
+    } else {
+      await prefs.setString('server_url', newUrl);
+      _networkController = AppNetworking(server: newUrl);
+      showSnackbar("Server changed successfully to $newUrl", scaffoldState);
+    }
+
+    // Let user continue with login by removing keyboard and popup
+    FocusManager.instance.primaryFocus?.unfocus();
+    if (context.mounted) {
+      Navigator.of(context).pop(); 
+    }
+  }
 
   void pushSignupPage(BuildContext context) {
     if (context.mounted) {

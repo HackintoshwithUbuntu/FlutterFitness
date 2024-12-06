@@ -2,9 +2,11 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class AppNetworking {
-  // TODO possibly modify this to use a config file
   // Variable to store server
-  static const String server = 'http://flutterfitness.hscscalinggraphs.au:8080';
+  // static const String server = 'http://flutterfitness.hscscalinggraphs.au:8080';
+  String server;
+
+  AppNetworking({required this.server});
 
   // Signup Attempt
   Future<bool> attemptSignup(

@@ -1,6 +1,6 @@
 # FlutterFitness
 
-A beautiful Material Design fitness tracking app made in Flutter. Tracks your running and walking activity
+A beautiful Material Design fitness tracking app made in Flutter. Tracks your running and walking activity. Comes with a self-hosted server option for privacy of your data.
 
 ## Screenshots
 
@@ -31,11 +31,9 @@ Include a part about updating the app code to reference the new server
 flask --app server.py  run --host=0.0.0.0 -p 8080 or gunicorn
 
 ## Other Notes
-The majority of the icons used in the app were created by me. They have been included as a font in the assets folder.
+The vast majority of the icons used in the app were created by me. They have been included as a font in the assets folder.
 
 You will find that there are references to an app called "runfun" throughout the packages, this was a previous name for the app. The package names were not updated.
-
-This application was created as part of a major project for the Software Design and Development (now Software Engineering) course in New South Wales, Australia. You can find additional documentation that was created for this assessment within the "Documentation" folder. Documentation references an old URL for the server which is no longer active.
 
 
 
@@ -45,9 +43,12 @@ Things to add
  - automated build pipeline
  - explain documentation incl insomnia
  - why its called runfun
- - mention its a sdd / seng app
  - get screenshots
  - maybe host a server if you can to help you get screenshots
  - a how to run
  - mention most of the icons were made yourself
  - maybe even thak dunne
+ - Update things about not being ablt to change server, add gunicorn/flask instructions, flutter version
+ - Using your own api keys with environment
+ - Features section at start with things like local caching
+ - Then links to github binaries in releases section

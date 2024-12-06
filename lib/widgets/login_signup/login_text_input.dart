@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'package:runfun/main_notifier.dart';
 import 'package:provider/provider.dart';
+import 'package:runfun/widgets/login_signup/server_change_dialog.dart';
 
 class LoginTextInput extends StatelessWidget {
   const LoginTextInput({
@@ -19,6 +20,23 @@ class LoginTextInput extends StatelessWidget {
         alignment: Alignment.center,
         child: Column(
           children: <Widget> [
+            // Button to change the server
+            Align(
+              alignment: Alignment.centerRight,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: TextButton(
+                  onPressed: () => showDialog(
+                    context: context, 
+                    builder: (context) => const ServerChangeDialog()
+                  ),
+                  child: const Text(
+                    'Change Server',
+                    style: TextStyle(fontSize: 16)
+                  )
+                ),
+              )
+            ),
             // Show the title and space it away from other widgets by forcing
             // it to the centre of its flex
             const Flexible(

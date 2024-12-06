@@ -31,7 +31,8 @@ class RunNotifier extends ChangeNotifier {
 
   RunNotifier({required this.scaffoldKey, required this.prefs}) {
     _logicController = RunLogic(notify: notify);
-    _networkController = AppNetworking();
+    String serverUrl = prefs.getString('server_url') ?? 'http://flutterfitness.hscscalinggraphs.au:8080';
+    _networkController = AppNetworking(server: serverUrl);
   }
 
   void notify() => notifyListeners();
