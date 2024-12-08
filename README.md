@@ -1,6 +1,12 @@
-# FlutterFitness
 
+# FlutterFitness
 A beautiful Material Design fitness tracking app made in Flutter. Tracks your running and walking activity. Comes with a self-hosted server option for privacy of your data.
+
+<div align="center">
+  <a href="https://dev.azure.com/muzammilahmad/FlutterFitness/_build/latest?definitionId=1&branchName=main">
+    <img src="https://dev.azure.com/muzammilahmad/FlutterFitness/_apis/build/status%2FHackintoshwithUbuntu.FlutterFitness?branchName=main" alt="Build Status">
+  </a>
+</div>
 
 ## Screenshots
 
