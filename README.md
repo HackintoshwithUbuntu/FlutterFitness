@@ -29,7 +29,7 @@ Make sure you have a Flutter development environment set up. If not, you can vis
 #### Setting up Google Maps
 You will need a Google Maps API key for the Google Maps components to work in the app. The Google Maps SDK is free to use on Android and IOS. 
 
-To use your key when compiling, create a file named `.env` and set its contents to be 
+To use your key when compiling, create a file named `.env` at the root of the project and set its contents to be 
 ```bash
 gmap_api_key=YOUR_API_KEY
 ```  
