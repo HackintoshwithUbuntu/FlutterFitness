@@ -8,7 +8,17 @@ A beautiful Material Design fitness tracking app made in Flutter. Tracks your ru
   </a>
 </div>
 
+
+
 ## Screenshots
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/9f7f04d3-5605-4ae0-ada4-a60e708ac7a3" width="19%">
+  <img src="https://github.com/user-attachments/assets/053d679b-6aa4-41fd-9938-815f3f6705a4" width="19%">
+  <img src="https://github.com/user-attachments/assets/03c6f80f-3da6-4392-bb8c-a04cdb96c96b" width="19%">
+  <img src="https://github.com/user-attachments/assets/827ca7b3-c7b6-45e6-bcd0-0f09c5fc31e7" width="19%">
+  <img src="https://github.com/user-attachments/assets/7b2ce986-9220-417d-a80f-bbc394cbe8a5" width="19%">
+</div>
 
 TODO
 A very short video demo is available here (TODO link)
